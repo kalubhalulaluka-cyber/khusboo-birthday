@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f8fa">
+    <meta
+      name="description"
+      content="Khusboo ke liye ek birthday surprise, dosti aur dil se behan ke rishte ke saath."
+    >
+    <title>Happy Birthday, Khusboo!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="is-locked" data-theme="ice">
+    <section class="birthday-gate" id="birthday-gate" aria-labelledby="gate-title">
+      <div class="gate-card">
+        <span class="gate-snowflake gate-snowflake--one" aria-hidden="true">❄</span>
+        <span class="gate-snowflake gate-snowflake--two" aria-hidden="true">✦</span>
+        <span class="gate-emblem" aria-hidden="true">♡</span>
+        <p class="eyebrow gate-eyebrow">Ek chhota sa birthday surprise</p>
+        <h1 id="gate-title">Khusboo,<br><span>pyaari si behan.</span></h1>
+        <p class="gate-description">
+          Surprise kholne ke liye apna birthday month aur date select karo.
+        </p>
+        <form class="gate-form" id="birthday-gate-form">
+          <label for="birthday-month">Tumhari birthday</label>
+          <div class="birthday-selects">
+            <select id="birthday-month" name="month" autocomplete="bday-month" required>
+              <option value="" selected disabled>Mahina</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select id="birthday-day" name="day" autocomplete="bday-day" aria-label="Birthday ka din" required>
+              <option value="" selected disabled>Date</option>
+            </select>
+          </div>
+          <button class="button button--primary gate-submit" type="submit">
+            Surprise kholo <span aria-hidden="true">→</span>
+          </button>
+          <p class="gate-status" id="gate-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="gate-footnote">Ek khaas dost ke liye, dil se banaya ♡</p>
+      </div>
+    </section>
+
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+    <div class="snowfall-layer" id="snowfall-layer" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Birthday surprise, home">
+        <span class="brand-icon" aria-hidden="true">✿</span>
+        <span>dosti se bana apna-pan</span>
+      </a>
+      <a class="topbar-link" href="#message">Dil se ek baat <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Ek khaas dost ke naam</p>
+          <h1 id="hero-title">Happy Birthday,<br><span>pyaari<br>Khusboo</span><br>behan! <span class="title-heart" aria-hidden="true">♥</span></h1>
+          <p class="hero-description">
+            Kuch log dost bankar zindagi mein aate hain, aur dheere-dheere
+            dil ki family ban jaate hain. Tum meri waisi hi khaas behan ho.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#message">
+              Tumhare liye ek surprise <span aria-hidden="true">↓</span>
+            </a>
+            <span class="handwritten">dost bhi, behan bhi <span aria-hidden="true">♡</span></span>
+          </div>
+          <div class="wish-note">
+            <span class="wish-note-icon" aria-hidden="true">✦</span>
+            <p>Kuch rishte chune nahi jaate,<br><strong>dil khud apna bana leta hai.</strong></p>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Birthday photo and decorations">
+          <span class="orbit orbit--one" aria-hidden="true"></span>
+          <span class="orbit orbit--two" aria-hidden="true"></span>
+          <span class="sparkle sparkle--one" aria-hidden="true">✦</span>
+          <span class="sparkle sparkle--two" aria-hidden="true">✧</span>
+          <span class="sparkle sparkle--three" aria-hidden="true">✦</span>
+          <span class="floating-heart" aria-hidden="true">♥</span>
+
+          <div class="photo-card">
+            <div class="photo-frame">
+              <img
+                class="sister-photo"
+                id="sister-photo"
+                src="images/sister-03.jpeg"
+                alt="Meri chosen sister ki ek pyaari si selfie"
+              >
+              <span class="photo-sticker" aria-hidden="true">for you ♡</span>
+            </div>
+            <label class="photo-upload" for="photo-input">
+              <span class="upload-icon" aria-hidden="true">＋</span>
+              <span id="upload-label">Sister ki photo badlein</span>
+            </label>
+            <input id="photo-input" class="visually-hidden" type="file" accept="image/*">
+            <p class="photo-hint" id="photo-hint">Sister ki koi aur photo choose karein</p>
+          </div>
+          <div class="cake-sticker">
+            <img class="cake-photo" src="images/birthday-cake.jpg" alt="A decorated birthday cake with candles" loading="lazy" decoding="async">
+          </div>
+          <span class="confetti confetti--one" aria-hidden="true"></span>
+          <span class="confetti confetti--two" aria-hidden="true"></span>
+          <span class="confetti confetti--three" aria-hidden="true"></span>
+          <span class="confetti confetti--four" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section class="design-studio section-shell" aria-labelledby="design-title">
+        <div class="section-heading design-heading">
+          <p class="eyebrow">Khusboo ke liye thoda extra magic</p>
+          <h2 id="design-title">Apna pasandida <span>look chuno</span></h2>
+        </div>
+        <div class="design-panel">
+          <div class="theme-picker">
+            <div class="design-label">
+              <h3>Color themes</h3>
+              <p>Har rang dekhne ke liye tap karo</p>
+            </div>
+            <div class="theme-options" role="group" aria-label="Color theme chunein">
+              <button class="theme-option" type="button" data-theme-choice="ice" aria-pressed="true">
+                <span class="theme-swatches theme-swatches--ice" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Ice teal</span>
+              </button>
+              <button class="theme-option" type="button" data-theme-choice="rose" aria-pressed="false">
+                <span class="theme-swatches theme-swatches--rose" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Rose</span>
+              </button>
+              <button class="theme-option" type="button" data-theme-choice="lavender" aria-pressed="false">
+                <span class="theme-swatches theme-swatches--lavender" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Lavender</span>
+              </button>
+              <button class="theme-option" type="button" data-theme-choice="sunset" aria-pressed="false">
+                <span class="theme-swatches theme-swatches--sunset" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Sunset</span>
+              </button>
+              <button class="theme-option" type="button" data-theme-choice="mint" aria-pressed="false">
+                <span class="theme-swatches theme-swatches--mint" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Mint</span>
+              </button>
+              <button class="theme-option" type="button" data-theme-choice="midnight" aria-pressed="false">
+                <span class="theme-swatches theme-swatches--midnight" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Midnight</span>
+              </button>
+            </div>
+          </div>
+
+          <p class="design-status" id="design-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="games-section section-shell" aria-labelledby="games-title">
+        <div class="section-heading">
+          <p class="eyebrow">Press play · forget the outside world</p>
+          <h2 id="games-title">Khusboo's <span>little arcade</span></h2>
+          <p class="games-intro">Pick a game, test your reflexes, aur birthday masti shuru.</p>
+        </div>
+        <div class="game-grid">
+          <article class="game-card game-card--dash" aria-labelledby="dash-game-title">
+            <div class="game-card-heading">
+              <span class="game-number" aria-hidden="true">01 / ARCADE</span>
+              <div>
+                <h3 id="dash-game-title">Cake Dash</h3>
+                <p>Catch the treats. Dodge the lemons. Save the cake!</p>
+              </div>
+            </div>
+            <div class="dash-hud">
+              <span class="game-stat" id="dash-score">Treats 0 / 12</span>
+              <span class="game-stat" id="dash-lives" aria-label="Lives">♥ ♥ ♥</span>
+              <span class="game-stat" id="dash-timer">30 sec</span>
+            </div>
+            <div class="dash-arena" id="dash-arena" tabindex="0" aria-label="Cake Dash play area">
+              <p class="dash-overlay" id="dash-overlay">Move your tray. Catch <strong>12 treats</strong> before time runs out — 3 lemons end the run.</p>
+              <span class="dash-player" id="dash-player" aria-hidden="true">🧺</span>
+            </div>
+            <div class="dash-controls">
+              <button class="dash-move" id="dash-left" type="button" aria-label="Move tray left">←</button>
+              <span>Drag or use arrows</span>
+              <button class="dash-move" id="dash-right" type="button" aria-label="Move tray right">→</button>
+              <button class="game-button" id="dash-start" type="button">Start run</button>
+            </div>
+            <p class="game-status" id="dash-status" role="status" aria-live="polite">Ready when you are, chef.</p>
+          </article>
+
+          <article class="game-card game-card--code" aria-labelledby="code-game-title">
+            <div class="game-card-heading">
+              <span class="game-number" aria-hidden="true">02 / LOGIC</span>
+              <div>
+                <h3 id="code-game-title">Gift Code</h3>
+                <p>Crack the 3-digit lock in 7 tries. No repeated digits.</p>
+              </div>
+            </div>
+            <div class="code-machine">
+              <div class="code-lock" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>
+              <p class="code-clue">🟢 Right digit, right place &nbsp;·&nbsp; 🟡 Right digit, wrong place</p>
+              <div class="code-inputs" aria-label="Enter your three digit guess">
+                <label class="visually-hidden" for="code-digit-1">First digit</label>
+                <select id="code-digit-1" aria-label="First digit"></select>
+                <label class="visually-hidden" for="code-digit-2">Second digit</label>
+                <select id="code-digit-2" aria-label="Second digit"></select>
+                <label class="visually-hidden" for="code-digit-3">Third digit</label>
+                <select id="code-digit-3" aria-label="Third digit"></select>
+                <button class="game-button" id="code-guess" type="button">Try code</button>
+              </div>
+              <p class="code-history-title">Your attempts <span id="code-attempts">0 / 7</span></p>
+              <ol class="code-history" id="code-history" aria-label="Previous code guesses"></ol>
+            </div>
+            <div class="game-controls">
+              <button class="game-button" id="code-start" type="button">New lock</button>
+            </div>
+            <p class="game-status" id="code-status" role="status" aria-live="polite">Secret code set hai. Can you crack it?</p>
+          </article>
+
+          <article class="game-card game-card--word" aria-labelledby="word-game-title">
+            <div class="game-card-heading">
+              <span class="game-number" aria-hidden="true">03 / WORDS</span>
+              <div>
+                <h3 id="word-game-title">Jumbled Joy</h3>
+                <p>Unscramble the birthday words before the 45-second clock hits zero.</p>
+              </div>
+            </div>
+            <div class="word-machine">
+              <div class="word-hud">
+                <span id="word-round">ROUND 0 / 6</span>
+                <span id="word-timer" role="timer">45</span>
+                <span id="word-score">0 PTS</span>
+              </div>
+              <p class="word-hint" id="word-hint">Press start to reveal your first clue.</p>
+              <p class="word-scramble" id="word-scramble" aria-label="Scrambled word">? ? ? ?</p>
+              <form class="word-form" id="word-form">
+                <label class="visually-hidden" for="word-answer">Unscramble the word</label>
+                <input id="word-answer" name="answer" type="text" autocomplete="off" autocapitalize="characters" maxlength="12" placeholder="TYPE YOUR ANSWER" disabled>
+                <button class="game-button" id="word-submit" type="submit" disabled>Lock it in</button>
+              </form>
+              <p class="word-feedback" id="word-feedback" aria-live="polite"></p>
+            </div>
+            <div class="game-controls">
+              <button class="game-button" id="word-start" type="button">Start word run</button>
+            </div>
+            <p class="game-status" id="word-status" role="status" aria-live="polite">Six words. 45 seconds of glory.</p>
+          </article>
+
+          <article class="game-card game-card--spot" aria-labelledby="spot-game-title">
+            <div class="game-card-heading">
+              <span class="game-number" aria-hidden="true">04 / REFLEX</span>
+              <div>
+                <h3 id="spot-game-title">Spot the sparkle</h3>
+                <p>One icon is different. Find it before it disappears.</p>
+              </div>
+            </div>
+            <div class="spot-hud">
+              <span class="game-stat" id="spot-round">Find 1 / 10</span>
+              <span class="game-stat" id="spot-timer">30 sec</span>
+              <span class="game-stat" id="spot-score">0 found</span>
+            </div>
+            <div class="spot-board" id="spot-board" role="group" aria-label="Find the different icon">
+              <p class="spot-overlay" id="spot-overlay">Ready for a tiny test of your eagle eyes?</p>
+            </div>
+            <div class="game-controls">
+              <button class="game-button" id="spot-start" type="button">Find the odd one</button>
+            </div>
+            <p class="game-status" id="spot-status" role="status" aria-live="polite">The quicker you spot it, the higher your streak.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="memories-section section-shell" aria-labelledby="memories-title">
+        <div class="section-heading">
+          <p class="eyebrow">Dosti ke woh pyaare pal</p>
+          <h2 id="memories-title">Tumhari pyaari <span>yaadein</span></h2>
+          <p class="gallery-hint">Photos dekhne ke liye swipe karein <span aria-hidden="true">→</span></p>
+        </div>
+        <div class="memory-gallery" aria-label="Meri chosen sister ki photo gallery">
+          <figure class="memory-card memory-card--portrait-top">
+            <img src="images/sister-01.jpeg" alt="Mask ke saath ek fun black-and-white selfie" loading="lazy" decoding="async">
+            <figcaption>Thodi si masti <span aria-hidden="true">♡</span></figcaption>
+          </figure>
+          <figure class="memory-card memory-card--portrait-top">
+            <img src="images/sister-02.jpeg" alt="Ghar par khinchi hui ek pyaari black-and-white photo" loading="lazy" decoding="async">
+            <figcaption>Ek pyaari si yaad <span aria-hidden="true">✦</span></figcaption>
+          </figure>
+          <figure class="memory-card">
+            <img src="images/sister-04.jpeg" alt="Haathon se heart banati hui cute selfie" loading="lazy" decoding="async">
+            <figcaption>Hasi wali selfie <span aria-hidden="true">♡</span></figcaption>
+          </figure>
+          <figure class="memory-card">
+            <img src="images/sister-05.jpeg" alt="Raat ko outing par li gayi ek photo" loading="lazy" decoding="async">
+            <figcaption>Outing wali smile <span aria-hidden="true">✦</span></figcaption>
+          </figure>
+          <figure class="memory-card">
+            <img src="images/sister-06.jpeg" alt="Bright yellow top mein khinchi hui portrait photo" loading="lazy" decoding="async">
+            <figcaption>Sunshine in yellow <span aria-hidden="true">☀</span></figcaption>
+          </figure>
+          <figure class="memory-card memory-card--landscape">
+            <img src="images/sister-07.jpeg" alt="Apni dost ke saath selfie leti hui" loading="lazy" decoding="async">
+            <figcaption>Dosti wali selfie <span aria-hidden="true">♡</span></figcaption>
+          </figure>
+          <figure class="memory-card memory-card--portrait-top">
+            <img src="images/sister-08.jpeg" alt="Meri behan ki ek purani photo" loading="lazy" decoding="async">
+            <figcaption>Ek purani yaad <span aria-hidden="true">✦</span></figcaption>
+          </figure>
+          <figure class="memory-card">
+            <img src="images/sister-09.jpeg" alt="Ghoomne ke dauraan li gayi ek photo" loading="lazy" decoding="async">
+            <figcaption>Travel wali smile <span aria-hidden="true">♡</span></figcaption>
+          </figure>
+          <figure class="memory-card">
+            <img src="images/sister-10.jpeg" alt="Blue festive outfit mein ek khoobsurat photo" loading="lazy" decoding="async">
+            <figcaption>Festive wali smile <span aria-hidden="true">✦</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="love-section section-shell" aria-labelledby="love-title">
+        <div class="section-heading">
+          <p class="eyebrow">Kuch rishte dil se chune jaate hain</p>
+          <h2 id="love-title">Dost bankar aayi,<br><span>pyaari si behan ban gayi.</span></h2>
+        </div>
+        <div class="love-cards">
+          <article class="love-card">
+            <span class="love-card-icon love-card-icon--peach" aria-hidden="true">☀</span>
+            <h3>Pyaari si dosti</h3>
+            <p>Ek pyari si dosti, jo waqt ke saath dil ke aur kareeb ho gayi.</p>
+          </article>
+          <article class="love-card">
+            <span class="love-card-icon love-card-icon--lilac" aria-hidden="true">♡</span>
+            <h3>Chosen family</h3>
+            <p>Har secret, har silly joke — tumhare saath har baat apni si lagti hai.</p>
+          </article>
+          <article class="love-card">
+            <span class="love-card-icon love-card-icon--yellow" aria-hidden="true">✦</span>
+            <h3>Hamesha saath</h3>
+            <p>Faasle chahe jitne hon, hamara apna-pan hamesha rahega.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="message-section section-shell" id="message" aria-labelledby="message-title">
+        <div class="message-card">
+          <span class="message-snowflake message-snowflake--left" aria-hidden="true">❄</span>
+          <span class="message-snowflake message-snowflake--right" aria-hidden="true">❄</span>
+          <p class="eyebrow">Meri chosen sister ke liye</p>
+          <h2 id="message-title">Ek dost, jo pyaari si behan ban gayi...</h2>
+          <p class="message-copy">
+            Tum meri zindagi mein dost bankar aayi, par kab pyaari si behan ban
+            gayi, pata hi nahi chala. Har hasi, har baat aur tumhari apni
+            pyaari si photos ke liye thank you. Tumhara aane wala saal tumhari
+            smile jaisa khoobsurat ho — dher saari khushiyon aur tumhare
+            favourite palon se bhara hua.
+          </p>
+          <p class="signature">Lucky hoon ki tum meri dost ho <span aria-hidden="true">♥</span></p>
+          <button class="button button--surprise" id="surprise-button" type="button" aria-controls="surprise-message" aria-expanded="false">
+            Dil se ek note kholo <span aria-hidden="true">✦</span>
+          </button>
+          <div class="surprise-message" id="surprise-message" aria-live="polite" hidden>
+            <span class="surprise-sparkle surprise-sparkle--one" aria-hidden="true">✦</span>
+            <span class="surprise-sparkle surprise-sparkle--two" aria-hidden="true">✧</span>
+            <p class="surprise-kicker">A little note, just for you</p>
+            <h3>Khusboo, you make life brighter.</h3>
+            <p class="surprise-copy">
+              Kuch log zindagi mein dost bankar aate hain, aur apnepan se family
+              ban jaate hain. Tum meri zindagi ki aisi hi ek khaas dost ho —
+              tumhari hasi aur har chhoti-badi yaad mere liye bahut precious hai.
+            </p>
+            <p class="surprise-copy">
+              Is naye saal mein tumhe woh saari khushiyan milen jo tum deserve
+              karti ho. Apne dreams chase karti raho, apni roshni kabhi kam mat
+              hone dena.
+            </p>
+            <p class="surprise-signoff">Happy Birthday, meri pyaari si behan.<br><span>With lots of love, tumhari dost hamesha</span> <b aria-hidden="true">♥</b></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Made with <span class="footer-heart" aria-label="love">♥</span> just for you</span>
+      <span class="footer-sparkle" aria-hidden="true">✧</span>
+    </footer>
+    <div class="celebration-layer" id="celebration-layer" aria-hidden="true"></div>
+    <p class="visually-hidden" id="announcement" aria-live="polite"></p>
+  </body>
+</html>
